@@ -1,0 +1,17 @@
+!Job
+target: !Target
+  head: 3db1ea49df763f235739fd06709387d892672e82
+  email: travis@example.org
+  branch: split2
+  remote: https://github.com/pravindra/arrow
+  version: 0.11.1.dev574
+tasks:
+  gandiva-jar-trusty: !Task
+    platform: linux
+    template: gandiva-jars/travis.linux.yml
+    artifacts:
+    - arrow-gandiva-0.11.1.dev574-SNAPSHOT.jar
+    params: {}
+    branch: nightly-86-gandiva-jar-trusty
+    commit: 9c842813eb0e0c4cdf87456c4f9076691b25ca9d
+branch: nightly-86
