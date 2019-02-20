@@ -1,0 +1,18 @@
+!Job
+target: !Target
+  head: 4bfeaf57f32ed5dd7bdbfb3162d96d11cefa8f6b
+  email: travis@example.org
+  branch: reallocs
+  remote: https://github.com/pravindra/arrow
+  version: 0.11.1.dev849
+  no_rc_version: 0.11.1.dev849
+tasks:
+  gandiva-jar-osx: !Task
+    platform: osx
+    template: gandiva-jars/travis.osx.yml
+    artifacts:
+    - arrow-gandiva-0.11.1.dev849-SNAPSHOT.jar
+    params: {}
+    branch: nightly-126-gandiva-jar-osx
+    commit: 32530a7e317bf74e74a101eb89131db956656b00
+branch: nightly-126
